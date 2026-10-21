@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Rmatrix: multilevel, multichannel R-matrix code"
+authors:
+  - family-names: "Rogachev"
+    given-names: "Grigory V."
+    orcid: "https://orcid.org/0000-0003-1120-6103"
+    affiliation: "Texas A&M University"
+  - family-names: "Volya"
+    given-names: "Alexander"
+    orcid: "https://orcid.org/0000-0002-1765-6466"
+    affiliation: "Florida State University"
+version: "1.0.0"
+license: "GPL-3.0-or-later"
+keywords:
+  - nuclear physics
+  - R-matrix
+  - nuclear reactions
+  - resonances
+abstract: "Multilevel, multichannel R-matrix calculation of differential cross sections for low-energy nuclear reactions: elastic and inelastic scattering with Coulomb and nuclear interference, Blatt-Biedenharn angular distributions, bound and sub-threshold levels with Whittaker closed-channel boundary conditions, and a resonance finder."

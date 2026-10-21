@@ -1,0 +1,36 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Rmatrix",
+  "description": "Multilevel, multichannel R-matrix calculation of differential cross sections for low-energy nuclear reactions: elastic and inelastic scattering with Coulomb and nuclear interference, Blatt-Biedenharn angular distributions, bound and sub-threshold levels with Whittaker closed-channel boundary conditions, and a resonance finder.",
+  "version": "1.0.0",
+  "license": "https://spdx.org/licenses/GPL-3.0-or-later",
+  "programmingLanguage": "Fortran",
+  "operatingSystem": ["Linux", "macOS"],
+  "softwareRequirements": ["gfortran", "GNU Scientific Library (GSL)", "LAPACK and BLAS"],
+  "codeRepository": "https://github.com/alvolya/rmatrix-fortran",
+  "developmentStatus": "active",
+  "dateCreated": "1998-10-07",
+  "keywords": ["nuclear physics", "R-matrix", "nuclear reactions", "resonances", "cross sections"],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Grigory V.",
+      "familyName": "Rogachev",
+      "@id": "https://orcid.org/0000-0003-1120-6103",
+      "affiliation": {"@type": "Organization", "name": "Texas A&M University"}
+    },
+    {
+      "@type": "Person",
+      "givenName": "Alexander",
+      "familyName": "Volya",
+      "@id": "https://orcid.org/0000-0002-1765-6466",
+      "affiliation": {"@type": "Organization", "name": "Florida State University"}
+    }
+  ],
+  "funder": {
+    "@type": "Organization",
+    "name": "U.S. Department of Energy, Office of Science, Office of Nuclear Physics"
+  },
+  "funding": "DE-SC0026615"
+}

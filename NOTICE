@@ -1,0 +1,39 @@
+Rmatrix — multilevel, multichannel R-matrix code
+Copyright (C) 1998-2004, 2026 Grigory V. Rogachev
+Copyright (C) 2026 Alexander Volya
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version (SPDX: GPL-3.0-or-later).  See LICENSE.  Cite it
+as in CITATION.cff.
+
+Third-party components
+----------------------
+
+CERNLIB routines (wclbes.F, r1dp.F-r8dp.F, clogam64.F, cdigam64.F,
+gen/*): CERN Program Library, mathlib, 2006 release, Copyright CERN,
+Geneva, distributed by CERN under the GNU General Public License.  The
+files are unmodified.  WCLBES (C309) is COULCC by A. R. Barnett
+(Manchester, 1981) and I. J. Thompson (Daresbury, 1983), form modified
+by K. S. Koelbig (CERN, 1987), Comput. Phys. Commun. 36 (1985) 363;
+its helper routines cite J. Patry and S. Gupta, EIR-Bericht 247 (1973),
+and T. Takemasa, T. Tamura and H. H. Wolter, Comput. Phys. Commun. 17
+(1979) 351.  c309prec.inc and mtlprt.for are local replacements for
+CERNLIB's precision include and error printer.
+
+GNU Scientific Library (GSL), GNU GPL version 3 or later: confluent
+hypergeometric function U for the Whittaker function of closed
+channels (intgsl.f90).  Linked, not included.
+
+LAPACK and BLAS (modified BSD license), or Apple Accelerate on macOS:
+complex matrix inversion.  Linked, not included.
+
+The Clebsch-Gordan and Racah coefficients in rmbbb.f90 are
+reimplementations of the CERNLIB DCLEBG and DRACAW algorithms.
+
+Funding
+-------
+
+This material is based upon work supported by the Department of Energy
+under Award Number DE-SC0026615.

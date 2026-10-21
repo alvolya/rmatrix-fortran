@@ -1,0 +1,10 @@
+*.o
+*.mod
+Rmatrix
+*.output
+*.screen
+*.total
+!tests/18O/refs/*.output
+!tests/18O/refs-frozen-2026/*.output
+.DS_Store
+__pycache__/

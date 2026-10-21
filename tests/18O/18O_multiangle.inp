@@ -1,0 +1,20 @@
+! Channel cards: Ap (u)   Zp    Sp     At (u)    Zt    St     Q(MeV)  ChSp  ChR(fm)
+! masses in atomic mass units (integer mass numbers are an acceptable approximation)
+   4.002602  2.0   0.0   14.003242  6.0   0.0    0.0     0.0   5.20
+   1.008665  0.0   0.5   16.999132  8.0   2.5   -1.8173  2.0   4.60
+   1.008665  0.0   0.5   16.999132  8.0   2.5   -1.8173  3.0   4.60
+   1.008665  0.0   0.5   16.999132  8.0   0.5   -2.6880  0.0   4.60
+  -1.008665  0.0   0.5   16.999132  8.0   0.5   -2.6880  1.0   4.60
+
+&RMATRIX
+  Lmax    = 8,
+  Estart  = 1.00,   Efinal  = 6.00,   Estep   = 0.005,
+  Astart  = 20.0,  Afinal  = 180.0,  Astep   = 20.0,
+  ExitCh  = 1,
+  NRDef   = 0,
+  DKEY    = 0,      ! 0 = energy grid,  1 = use data.dat
+  QEx     = 0.0,
+  ecmlow  = 0.0,    ecmhigh = 0.0,
+  imphase = 0,      APA  = -1.0,  APAL = 0.3,  APEP = 3.0,  APAP = 0.3,
+  rdchan  = 2,
+/

@@ -1,0 +1,18 @@
+! Channel cards: Ap (u)   Zp    Sp     At (u)    Zt    St     Q(MeV)  ChSp  ChR(fm)
+! p + 14N from AZURE2 tests/thick_target_resonance/thick_target_resonance.azr (commit 9441e3d3c82f), pyazr 2.8.0
+     1.00783   1.0   0.50   14.00310   7.0   1.00     0.000000   0.5   5.5000
+    -1.00783   1.0   0.50   14.00310   7.0   1.00     0.000000   1.5   5.5000
+
+&RMATRIX
+  Lmax    = 3,
+  Estart  = 0.1,  Efinal = 3.85,  Estep = 0.3,
+  Astart  = 60,  Afinal = 60,  Astep = 1.0,
+  ExitCh  = 1,
+  NRDef   = 0,
+  DKEY    = 0,
+  QEx     = 0.0,
+  ecmlow  = 0.0,  ecmhigh = 0.0,
+  imphase = 0,  APA  = -1.0,  APAL = 0.3,  APEP = 3.0,  APAP = 0.3,
+  rdchan  = 1,
+  BcMode  = 1,          ! B_c = S_c(E_1): AZURE2's boundary condition
+/
