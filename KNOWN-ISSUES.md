@@ -47,8 +47,7 @@ Items listed below are documented behaviour.
 - **Angle-integrated output (`.total`).**  For a charged-particle
   elastic exit it contains the nuclear Blatt–Biedenharn B_0 term only
   (the Rutherford and interference parts diverge); the S-factor column
-  is built from it.  The `.screen` file lists an electron-screening
-  estimate that is never applied to any cross section.
+  is built from it.
 - **DKEY = 1 chi-squared mode** reads a hard-coded `data.dat`, divides
   by the number of points, not degrees of freedom, and prints one
   number; it is a remnant of the original fitting workflow.

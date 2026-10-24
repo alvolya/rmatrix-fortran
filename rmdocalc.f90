@@ -38,12 +38,10 @@ SUBROUTINE DOCALC
     STOP 1
   END IF
   OPEN(2,  file=TRIM(base)//'.total',  status='unknown')
-  OPEN(4,  file=TRIM(base)//'.screen', status='unknown')
 
   ! Column headers (# prefix is recognised by gnuplot, Python pandas, etc.)
   WRITE(1,'(a)') '# Ecm(MeV)         angle(deg)     dsigma/dOmega(mb/sr)'
   WRITE(2,'(a)') '# Ecm(MeV)      TotalCS(mb)   S-factor(MeV.mb)'
-  WRITE(4,'(a)') '# E+Q(MeV)      Ue(MeV)       escreen'
 
   DO nchan = 1, lastch
     RMass(nchan) = Ap(nchan)*At(nchan) / (Ap(nchan)+At(nchan))

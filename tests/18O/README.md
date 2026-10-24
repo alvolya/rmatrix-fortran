@@ -13,8 +13,8 @@ are set to zero.
 python3 ../../plot_xsec.py 18O.out --angle 180
 ```
 
-Writes `18O.out` (E, angle, dsigma/dOmega in mb/sr), `18O.total`
-(angle-integrated nuclear term and S-factor) and `18O.screen`.
+Writes `18O.out` (E, angle, dsigma/dOmega in mb/sr) and `18O.total`
+(angle-integrated nuclear term and S-factor).
 `NRDef = 10, rdchan = 2` also runs the resonance finder on level 10 in
 the n + 17O channel and prints its observed energy and width.
 

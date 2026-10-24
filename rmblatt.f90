@@ -25,7 +25,7 @@ SUBROUTINE rmblatt(ecm, acm, cshi)
   DOUBLE PRECISION :: sigma, sigI, sigII, sigIII, BBB
   DOUBLE PRECISION :: cscms(MaxCh), LP(0:2*MaxNL), cshi_loc
   DOUBLE PRECISION :: Bcoef(1:MaxCh,1:MaxCh,0:2*MaxNL), Bvalue, TCS, Btot
-  DOUBLE PRECISION :: MainCl, AnCos, ClSin, Sfactor, Ue, escreen
+  DOUBLE PRECISION :: MainCl, AnCos, ClSin, Sfactor
   INTEGER          :: nchan, ChSpin, ChSpPr, nch2pr
   COMPLEX*16       :: ClExp, ClAmpl, i
 
@@ -153,24 +153,9 @@ SUBROUTINE rmblatt(ecm, acm, cshi)
     if (Inverse) then
       Sfactor = 4.d0*PI*Bvalue*(ecm+Q(chx)) * &
                 exp(2.d0*PI*eta(chx))*0.001d0
-      Ue      = Zp(chx)*Zt(chx)*ALPHA*HBARC / &
-                (5.291d4)*Zt(chx)
     else
       Sfactor = 4.d0*PI*Bvalue*(ecm+Q(1)) * &
                 exp(2.d0*PI*eta(1))*0.001d0
-      Ue      = Zp(1)*Zt(1)*ALPHA*HBARC/(5.291d4)*Zt(1)
-    endif
-
-    if (Inverse) then
-      if (10*Ue.LT.(ecm+Q(chx))) then
-        escreen = exp(PI*eta(chx)*Ue/(ecm+Q(chx)))
-        write(4,*) (ecm+Q(chx)), Ue, escreen
-      endif
-    else
-      if (10*Ue.LT.(ecm+Q(1))) then
-        escreen = exp(PI*eta(1)*Ue/(ecm+Q(1)))
-        write(4,*) (ecm+Q(1)), Ue, escreen
-      endif
     endif
 
     write(2,*) ecm, 4.d0*PI*Bvalue*0.001d0, Sfactor

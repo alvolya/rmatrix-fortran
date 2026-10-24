@@ -66,8 +66,11 @@ serve the regression test.
 ## Build requirements
 
 - **gfortran** — GCC Fortran compiler
-  - macOS: `brew install gcc gsl` (tested with GCC 16 on macOS ARM64 / Apple Silicon)
+  - macOS: `brew install gcc gsl`
   - Ubuntu/Debian: `sudo apt install gfortran make libgsl-dev liblapack-dev`
+
+  Tested on macOS (Apple Silicon, GCC 16, GSL 2.8) and Ubuntu 24.04 (gfortran 13,
+  GSL 2.7.1 and 2.8).
 - **GSL** (closed-channel Whittaker function) and **LAPACK/BLAS** (complex matrix
   inversion; Accelerate on macOS).
 - The CERNLIB routine `WCLBES` (C309, the complex Coulomb-function routine COULCC
@@ -83,9 +86,10 @@ make clean
 make debug      # clean rebuild with bounds checking
 ```
 
-GSL is located with `pkg-config`; `make GSL_PREFIX=/path` overrides it.  On
-Linux the LAPACK/BLAS link line is `LAPACK_LIBS` (default `-llapack -lblas`);
-macOS uses the Accelerate framework.
+GSL is located with `pkg-config`; without pkg-config the Makefile assumes
+`/usr/local`, and `make GSL_PREFIX=/path` overrides both.  On Linux the
+LAPACK/BLAS link line is `LAPACK_LIBS` (default `-llapack -lblas`); macOS uses
+the Accelerate framework.  `make test` needs Python 3 with numpy.
 
 ### Quick start
 
@@ -130,9 +134,8 @@ For `-o 18O_test.out` the following files are created:
 |------|----------|
 | `18O_test.out` | Main output: `Ecm (MeV)`, `angle (deg)`, `dσ/dΩ (mb/sr)` |
 | `18O_test.total` | Total cross section and astrophysical S-factor vs energy |
-| `18O_test.screen` | Electron screening factor vs energy (when applicable) |
 
-All files include a `#`-prefixed header line with column names, compatible with
+Both files include a `#`-prefixed header line with column names, compatible with
 gnuplot, Python pandas/numpy, and similar tools.
 
 ## Input file format (`.inp`)
@@ -247,7 +250,7 @@ following the CERNLIB `DCLEBG`/`DRACAW` algorithms; Legendre polynomials by
 ## Tests
 
 ```sh
-python3 tests/run_tests.py                 # builds, then tests
+python3 tests/run_tests.py                 # builds, then tests (needs numpy)
 python3 tests/run_tests.py --exe ./Rmatrix # existing build
 ```
 
@@ -343,6 +346,11 @@ python3 plot_xsec.py 18O_dp.output --angle 180 --data exp.dat --save xsec.pdf
 | `--no-legend` | Suppress legend |
 
 ## Acknowledgment
+
+The 2026 modernisation, review and release of this code were carried out within
+the DOE Genesis Mission project "Quantum-Enhanced Evaluation of Nuclear Reaction Cross
+Sections in R-Matrix Theory" (Florida State University, Texas A&M University,
+University of Notre Dame).
 
 This material is based upon work supported by the Department of Energy under
 Award Number DE-SC0026615.
