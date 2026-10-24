@@ -4,6 +4,7 @@
   "name": "Rmatrix",
   "description": "Multilevel, multichannel R-matrix calculation of differential cross sections for low-energy nuclear reactions: elastic and inelastic scattering with Coulomb and nuclear interference, Blatt-Biedenharn angular distributions, bound and sub-threshold levels with Whittaker closed-channel boundary conditions, and a resonance finder.",
   "version": "1.0.0",
+  "identifier": "https://doi.org/10.5281/zenodo.23617712",
   "license": "https://spdx.org/licenses/GPL-3.0-or-later",
   "programmingLanguage": "Fortran",
   "operatingSystem": ["Linux", "macOS"],
@@ -11,6 +12,7 @@
   "codeRepository": "https://github.com/alvolya/rmatrix-fortran",
   "developmentStatus": "active",
   "dateCreated": "1998-10-07",
+  "datePublished": "2026-10-24",
   "keywords": ["nuclear physics", "R-matrix", "nuclear reactions", "resonances", "cross sections"],
   "author": [
     {

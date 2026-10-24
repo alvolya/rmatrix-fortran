@@ -11,7 +11,10 @@ authors:
     orcid: "https://orcid.org/0000-0002-1765-6466"
     affiliation: "Florida State University"
 version: "1.0.0"
+doi: "10.5281/zenodo.23617712"
+date-released: "2026-10-24"
 license: "GPL-3.0-or-later"
+repository-code: "https://github.com/alvolya/rmatrix-fortran"
 keywords:
   - nuclear physics
   - R-matrix

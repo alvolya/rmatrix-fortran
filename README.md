@@ -8,7 +8,8 @@ Parts of the 2026 revision were prepared with the help of Claude (Anthropic)
 under the authors' direction and review.
 See `KNOWN-ISSUES.md` for conventions and limitations.
 License: GNU GPL version 3 or later, SPDX `GPL-3.0-or-later` (`LICENSE`); third-party
-components in `NOTICE`; citation in `CITATION.cff`.
+components in `NOTICE`; citation in `CITATION.cff`, DOI
+[10.5281/zenodo.23617712](https://doi.org/10.5281/zenodo.23617712).
 
 ## Physics
 
