@@ -1,7 +1,7 @@
-# Rmatrix
+# Rmatrix-Fortran
 
-Multilevel, multichannel R-matrix code for differential cross sections of
-low-energy nuclear reactions.  Original code G.V. Rogachev (Texas A&M
+Multilevel, multichannel R-matrix code (Fortran 90, program `Rmatrix`) for
+differential cross sections of low-energy nuclear reactions.  Original code G.V. Rogachev (Texas A&M
 University, 1998–2004; update 2026); Fortran 90
 modernisation, fixes and tests A. Volya (Florida State University, 2026).
 Parts of the 2026 revision were prepared with the help of Claude (Anthropic) 

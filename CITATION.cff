@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Rmatrix: multilevel, multichannel R-matrix code"
+title: "Rmatrix-Fortran: multilevel, multichannel R-matrix code"
 authors:
   - family-names: "Rogachev"
     given-names: "Grigory V."
